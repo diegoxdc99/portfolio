@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Dark obsidian background -->
+  <rect width="32" height="32" rx="7" fill="#0B0E14"/>
+
+  <!-- Subtle blue border -->
+  <rect width="32" height="32" rx="7" fill="none" stroke="#3b82f6" stroke-width="0.75" opacity="0.5"/>
+
+  <!-- Terminal title bar dots -->
+  <circle cx="6.5" cy="7" r="1.5" fill="#ef4444" opacity="0.8"/>
+  <circle cx="11" cy="7" r="1.5" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="15.5" cy="7" r="1.5" fill="#22c55e" opacity="0.8"/>
+
+  <!-- Separator line -->
+  <line x1="3" y1="11" x2="29" y2="11" stroke="#3b82f6" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- > prompt arrow -->
+  <path d="M6 17.5 L11 21 L6 24.5" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- _ cursor (blinking in real terminal) -->
+  <rect x="14" y="23" width="11" height="2" rx="1" fill="#3b82f6" opacity="0.9"/>
+</svg>
