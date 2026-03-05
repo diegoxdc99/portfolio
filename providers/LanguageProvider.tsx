@@ -1,13 +1,6 @@
 'use client'
 
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react'
+import { createContext, useCallback, useMemo, useSyncExternalStore } from 'react'
 import type { ReactNode } from 'react'
 import type { Language } from '@/types'
 
@@ -20,37 +13,48 @@ interface LanguageContextValue {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null)
 
-// ─── Provider ─────────────────────────────────────────────────────────────────
+// ─── External store helpers ───────────────────────────────────────────────────
 
 const STORAGE_KEY = 'portfolio-lang'
+const LANGUAGE_EVENT = 'portfolio:language-change'
 
-function detectInitialLanguage(): Language {
-  if (typeof window === 'undefined') return 'en'
+function readLanguage(): Language {
   const stored = localStorage.getItem(STORAGE_KEY) as Language | null
   if (stored === 'en' || stored === 'es') return stored
   return navigator.language.startsWith('es') ? 'es' : 'en'
 }
+
+function subscribeLanguage(cb: () => void): () => void {
+  window.addEventListener(LANGUAGE_EVENT, cb)
+  window.addEventListener('storage', cb)
+  return () => {
+    window.removeEventListener(LANGUAGE_EVENT, cb)
+    window.removeEventListener('storage', cb)
+  }
+}
+
+// No-op: mounted flips from false → true once on client and never changes again.
+function subscribeMounted(): () => void {
+  return () => {}
+}
+
+// ─── Provider ─────────────────────────────────────────────────────────────────
 
 interface LanguageProviderProps {
   children: ReactNode
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  // Use 'en' as SSR default to avoid hydration mismatch; real value is set on mount
-  const [language, setLanguage] = useState<Language>('en')
-  const [mounted, setMounted] = useState(false)
+  // Server snapshot → false; client snapshot → true. Prevents flash of wrong language.
+  const mounted = useSyncExternalStore(subscribeMounted, () => true, () => false)
 
-  useEffect(() => {
-    setLanguage(detectInitialLanguage())
-    setMounted(true)
-  }, [])
+  // Server snapshot → 'en' (no browser APIs); client snapshot reads localStorage / navigator.
+  const language = useSyncExternalStore(subscribeLanguage, readLanguage, () => 'en' as Language)
 
   const toggleLanguage = useCallback(() => {
-    setLanguage((prev) => {
-      const next: Language = prev === 'en' ? 'es' : 'en'
-      localStorage.setItem(STORAGE_KEY, next)
-      return next
-    })
+    const next: Language = readLanguage() === 'en' ? 'es' : 'en'
+    localStorage.setItem(STORAGE_KEY, next)
+    window.dispatchEvent(new Event(LANGUAGE_EVENT))
   }, [])
 
   const value = useMemo<LanguageContextValue>(
@@ -58,7 +62,6 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     [language, toggleLanguage],
   )
 
-  // Avoid flashing wrong language on first paint
   if (!mounted) return null
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
