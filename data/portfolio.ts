@@ -6,8 +6,8 @@ export const portfolio: PortfolioData = {
     name: "Diego Alberto Meneses Tamayo",
     shortName: "Diego Meneses",
     headline: {
-      en: "Senior Backend Engineer",
-      es: "Ingeniero Backend Senior",
+      en: "Senior Software Engineer",
+      es: "Ingeniero de Software Senior",
     },
     subheadline: {
       en: "Node.js · NestJS · Cloud Architecture",

@@ -55,9 +55,9 @@ export default function Navbar() {
           </div>
           <div>
             <p className="text-white text-lg font-bold leading-tight tracking-tight">
-              Dev<span className="text-brand">Core</span>
+              Diego<span className="text-brand"> Meneses</span>
             </p>
-            <p className="text-xs text-slate-400 tracking-wider uppercase">Backend Arch</p>
+            <p className="text-xs text-slate-400 tracking-wider uppercase">Backend Engineer</p>
           </div>
         </button>
 
