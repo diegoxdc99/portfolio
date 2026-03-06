@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/diegoxdc99/portfolio/compare/v1.2.1...v1.3.0) (2026-03-06)
+
+### Features
+
+* update hero section branding and navbar ([#5](https://github.com/diegoxdc99/portfolio/issues/5)) ([6bd9da5](https://github.com/diegoxdc99/portfolio/commit/6bd9da584c64648b4de873dcae781602bbb5c98a))
+
 ## [1.2.1](https://github.com/diegoxdc99/portfolio/compare/v1.2.0...v1.2.1) (2026-03-06)
 
 ### Bug Fixes
