@@ -57,7 +57,7 @@ export default function Hero() {
               {t(basics.headline)}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand via-cyber-accent to-white animate-pulse-slow">
-                {t({ en: 'Architect', es: 'Arquitecto' })}
+                {t({ en: 'Backend', es: 'Backend' })}
               </span>
             </h1>
             <p className="text-sm font-mono text-slate-400 tracking-widest uppercase">
