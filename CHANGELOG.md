@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/diegoxdc99/portfolio/compare/v1.2.0...v1.2.1) (2026-03-06)
+
+### Bug Fixes
+
+* time line errors ([#4](https://github.com/diegoxdc99/portfolio/issues/4)) ([50fcb2e](https://github.com/diegoxdc99/portfolio/commit/50fcb2e73fb40a910f613671055f5873ca535268))
+
 ## [1.2.0](https://github.com/diegoxdc99/portfolio/compare/v1.1.0...v1.2.0) (2026-03-06)
 
 ### Features
