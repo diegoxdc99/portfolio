@@ -98,7 +98,7 @@ export default function Navbar() {
                 key={lang}
                 onClick={() => language !== lang && toggleLanguage()}
                 className={[
-                  'px-3 py-1 rounded-full transition-all duration-200 uppercase',
+                  'px-3 py-2 rounded-full transition-all duration-200 uppercase min-h-[36px]',
                   language === lang
                     ? 'bg-slate-700 text-white'
                     : 'text-slate-400 hover:text-white',

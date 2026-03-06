@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <div className="w-full max-w-7xl mx-auto px-6 py-24 relative">
       {/* ── Rain background columns (CSS only) ── */}
-      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden>
+      <div className="hidden md:block fixed inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden>
         {[5, 15, 25, 35, 45, 55, 65, 75, 85, 95].map((left, i) => (
           <div
             key={left}
