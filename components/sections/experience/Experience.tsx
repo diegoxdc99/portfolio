@@ -52,10 +52,11 @@ export default function Experience() {
           <ExperienceCard key={item.id} item={item} index={index} />
         ))}
 
-        {/* Timeline end node */}
+        {/* Timeline end node — animated by GSAP in TimelineLine when progress ≥ 97% */}
         <div
+          data-timeline-diamond
           aria-hidden
-          className="absolute bottom-0 left-[3px] md:left-1/2 -translate-x-[5px] md:-translate-x-1/2 w-4 h-4 bg-slate-800 rotate-45 border border-slate-600"
+          className="absolute bottom-0 left-[3px] md:left-1/2 -translate-x-[7px] md:-translate-x-1/2 w-4 h-4 rotate-45 border"
         />
       </div>
     </div>
