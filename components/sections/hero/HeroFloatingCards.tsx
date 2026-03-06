@@ -29,7 +29,7 @@ export default function HeroFloatingCards({ cards }: HeroFloatingCardsProps) {
     <>
       {/* SVG connector lines */}
       <svg
-        className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-25"
+        className="hidden sm:block absolute inset-0 w-full h-full pointer-events-none z-0 opacity-25"
         aria-hidden
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -48,7 +48,7 @@ export default function HeroFloatingCards({ cards }: HeroFloatingCardsProps) {
             key={card.id}
             className={[
               positionClass,
-              'group z-20 flex items-center gap-3 p-3',
+              'hidden sm:flex group z-20 items-center gap-3 p-3',
               'bg-surface/90 border border-slate-700 backdrop-blur rounded-lg shadow-xl',
               'hover:scale-110 hover:shadow-2xl transition-all duration-200 cursor-default',
               card.accentClass,

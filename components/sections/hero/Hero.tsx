@@ -53,7 +53,7 @@ export default function Hero() {
 
           {/* Headline */}
           <motion.div variants={VARIANTS.item} className="space-y-3">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
               {t(basics.headline)}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand via-cyber-accent to-white animate-pulse-slow">
@@ -106,11 +106,11 @@ export default function Hero() {
         </motion.div>
 
         {/* ── Visual column ── */}
-        <div className="relative h-[500px] lg:h-[680px] w-full flex items-center justify-center">
+        <div className="relative h-[360px] sm:h-[420px] md:h-[500px] lg:h-[680px] w-full flex items-center justify-center">
           {/* Outer orbital rings */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden>
-            <div className="w-[420px] h-[420px] border border-slate-800/50 rounded-full" />
-            <div className="absolute w-[560px] h-[560px] border border-slate-800/25 rounded-full border-dashed animate-spin-slow" style={{ animationDuration: '60s' }} />
+            <div className="w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] border border-slate-800/50 rounded-full" />
+            <div className="absolute w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] md:w-[560px] md:h-[560px] border border-slate-800/25 rounded-full border-dashed animate-spin-slow" style={{ animationDuration: '60s' }} />
           </div>
 
           {/* Core orbital avatar */}

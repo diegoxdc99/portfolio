@@ -13,7 +13,7 @@ export default function HeroOrbit({ avatarUrl, name }: HeroOrbitProps) {
     <motion.div
       animate={{ y: [0, -12, 0] }}
       transition={{ duration: 6, repeat: Infinity, ease: [0.42, 0, 0.58, 1] as const }}
-      className="relative w-72 h-72 flex items-center justify-center"
+      className="relative w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72 flex items-center justify-center"
     >
       {/* Glow backdrop */}
       <div className="absolute inset-0 rounded-full bg-brand/5 blur-[80px]" aria-hidden />
@@ -31,14 +31,14 @@ export default function HeroOrbit({ avatarUrl, name }: HeroOrbitProps) {
         <DataStream delay={1.5} axis="horizontal" />
 
         {/* Avatar core */}
-        <div className="relative z-20 w-48 h-48 bg-obsidian rounded-full border border-brand/60 flex items-center justify-center shadow-inner">
-          <div className="w-40 h-40 rounded-full overflow-hidden border-2 border-brand relative group">
+        <div className="relative z-20 w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-obsidian rounded-full border border-brand/60 flex items-center justify-center shadow-inner">
+          <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-brand relative group">
             <Image
               src={avatarUrl}
               alt={name}
               fill
               className="object-cover opacity-90 grayscale group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
-              sizes="160px"
+              sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 160px"
               priority
             />
             <div className="absolute inset-0 bg-brand/15 mix-blend-overlay" aria-hidden />
