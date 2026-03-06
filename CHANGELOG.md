@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/diegoxdc99/portfolio/compare/v1.1.0...v1.2.0) (2026-03-06)
+
+### Features
+
+* improve layout ([#3](https://github.com/diegoxdc99/portfolio/issues/3)) ([fc687fb](https://github.com/diegoxdc99/portfolio/commit/fc687fb2bf01de44294003a06cdf8f5664c0eb70))
+
 ## [1.1.0](https://github.com/diegoxdc99/portfolio/compare/v1.0.0...v1.1.0) (2026-03-06)
 
 ### Features
