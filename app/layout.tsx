@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <LanguageProvider>
           <Navbar />
-          <main id="main-content" className="relative z-10 flex-1" tabIndex={-1}>
+          <main id="main-content" className="relative z-10 flex-1 pt-20" tabIndex={-1}>
             {children}
           </main>
           <Footer />

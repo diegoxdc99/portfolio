@@ -168,6 +168,10 @@
     font-family: var(--font-space-grotesk), system-ui, sans-serif;
   }
 
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+
   ::selection {
     background-color: rgba(59, 130, 246, 0.4);
     color: #fff;

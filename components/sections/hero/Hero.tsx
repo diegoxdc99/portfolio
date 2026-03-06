@@ -106,9 +106,9 @@ export default function Hero() {
         </motion.div>
 
         {/* ── Visual column ── */}
-        <div className="relative h-[360px] sm:h-[420px] md:h-[500px] lg:h-[680px] w-full flex items-center justify-center">
+        <div className="relative h-[280px] sm:h-[420px] md:h-[500px] lg:h-[680px] w-full flex items-center justify-center">
           {/* Outer orbital rings */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden>
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden" aria-hidden>
             <div className="w-[240px] h-[240px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] border border-slate-800/50 rounded-full" />
             <div className="absolute w-[300px] h-[300px] sm:w-[420px] sm:h-[420px] md:w-[560px] md:h-[560px] border border-slate-800/25 rounded-full border-dashed animate-spin-slow" style={{ animationDuration: '60s' }} />
           </div>

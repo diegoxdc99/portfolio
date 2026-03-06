@@ -24,7 +24,9 @@ export default function Navbar() {
   const handleNavClick = (href: string) => {
     setMobileOpen(false)
     const id = href.replace('#', '')
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }, 250)
   }
 
   return (
