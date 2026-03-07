@@ -24,7 +24,7 @@ export default function Contact() {
           {t({ en: "Let's", es: 'Hablemos' })}{' '}
           <span className="text-brand">{t({ en: 'Connect', es: '' })}</span>
         </h2>
-        <p className="text-slate-400 max-w-lg mx-auto text-lg font-light">
+        <p className="text-slate-400 max-w-lg mx-auto text-lg">
           {t({
             en: 'Open to new opportunities and interesting conversations. Reach out through your preferred channel.',
             es: 'Abierto a nuevas oportunidades y conversaciones interesantes. Contáctame por tu canal preferido.',

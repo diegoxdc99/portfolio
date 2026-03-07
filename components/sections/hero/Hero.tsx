@@ -62,7 +62,7 @@ export default function Hero() {
                 {basics.shortName.split(' ')[1]}
               </span>
             </h1>
-            <p className="text-xl md:text-2xl font-semibold text-slate-300">
+            <p className="text-xl md:text-2xl font-bold text-slate-300">
               {t(basics.headline)}
             </p>
           </motion.div>

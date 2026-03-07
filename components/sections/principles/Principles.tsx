@@ -39,7 +39,7 @@ export default function Principles() {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
           {t({ en: 'Engineering Principles', es: 'Principios de Ingeniería' })}
         </h2>
-        <p className="text-slate-400 max-w-xl text-lg font-light">
+        <p className="text-slate-400 max-w-xl text-lg">
           {t({
             en: 'The values that guide how I design and build software.',
             es: 'Los valores que guían cómo diseño y construyo software.',

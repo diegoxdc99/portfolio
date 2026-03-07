@@ -21,7 +21,7 @@ export default function Experience() {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
           {t({ en: 'Execution Path', es: 'Trayectoria' })}
         </h2>
-        <p className="text-slate-400 max-w-xl text-lg font-light">
+        <p className="text-slate-400 max-w-xl text-lg">
           {t({
             en: 'Detailed log of professional engagements and technical milestones.',
             es: 'Registro detallado de roles profesionales e hitos técnicos.',

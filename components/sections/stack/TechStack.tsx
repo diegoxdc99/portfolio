@@ -30,7 +30,7 @@ export default function TechStack() {
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
           {t({ en: 'Tech Stack', es: 'Stack Tecnológico' })}
         </h2>
-        <p className="text-slate-400 max-w-xl text-lg font-light">
+        <p className="text-slate-400 max-w-xl text-lg">
           {t({
             en: 'The tools and technologies I use to build scalable backend systems.',
             es: 'Las herramientas y tecnologías que uso para construir sistemas backend escalables.',
