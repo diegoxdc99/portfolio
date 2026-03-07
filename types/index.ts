@@ -40,6 +40,8 @@ export interface ExperienceItem {
   id: string
   company: string
   position: BilingualText
+  /** Short description of the product or system */
+  description: BilingualText
   /** ISO-style range, e.g. "July 2024 – Present". Empty string if unknown. */
   date: string
   current: boolean
@@ -47,13 +49,21 @@ export interface ExperienceItem {
   tech: string[]
 }
 
-// ─── Skills ───────────────────────────────────────────────────────────────────
+// ─── Tech Stack ──────────────────────────────────────────────────────────────
 
-export interface SkillGroup {
+export interface TechCategory {
   id: string
   name: BilingualText
-  level: 1 | 2 | 3 | 4 | 5
   keywords: string[]
+}
+
+// ─── Engineering Principles ──────────────────────────────────────────────────
+
+export interface EngineeringPrinciple {
+  id: string
+  title: BilingualText
+  description: BilingualText
+  icon: string
 }
 
 // ─── Social ───────────────────────────────────────────────────────────────────
@@ -81,7 +91,8 @@ export interface PortfolioData {
   }
   summary: BilingualText
   experience: ExperienceItem[]
-  skills: SkillGroup[]
+  techStack: TechCategory[]
+  principles: EngineeringPrinciple[]
   social: SocialLink[]
   nav: NavItem[]
   techBadges: TechBadge[]

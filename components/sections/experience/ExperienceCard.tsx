@@ -1,20 +1,16 @@
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
-import { useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { motion } from 'framer-motion'
 import type { ExperienceItem } from '@/types'
 import { useLanguage } from '@/hooks/useLanguage'
 
 interface ExperienceCardProps {
   item: ExperienceItem
-  /** Even index → card on left; odd → card on right */
   index: number
 }
 
 export default function ExperienceCard({ item, index }: ExperienceCardProps) {
   const { t } = useLanguage()
-  const [techOpen, setTechOpen] = useState(false)
   const isEven = index % 2 === 0
 
   return (
@@ -79,7 +75,10 @@ export default function ExperienceCard({ item, index }: ExperienceCardProps) {
           </span>
 
           <h3 className="text-xl font-bold text-white mb-0.5">{t(item.position)}</h3>
-          <h4 className="text-base text-slate-300 mb-3">{item.company}</h4>
+          <h4 className="text-base text-slate-300 mb-2">{item.company}</h4>
+
+          {/* Product/system description */}
+          <p className="text-sm text-slate-500 italic mb-3">{t(item.description)}</p>
 
           {/* Highlights */}
           <ul className="space-y-1.5">
@@ -91,42 +90,17 @@ export default function ExperienceCard({ item, index }: ExperienceCardProps) {
             ))}
           </ul>
 
-          {/* Tech stack toggle */}
+          {/* Tech stack — always visible */}
           {item.tech.length > 0 && (
-            <div className="mt-4">
-              <button
-                onClick={() => setTechOpen((v) => !v)}
-                className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-brand transition-colors font-mono"
-                aria-expanded={techOpen}
-              >
-                <span>{t({ en: 'Stack', es: 'Stack' })}</span>
-                <ChevronDown
-                  className={`w-3 h-3 transition-transform duration-200 ${techOpen ? 'rotate-180' : ''}`}
-                  aria-hidden
-                />
-              </button>
-              <AnimatePresence>
-                {techOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="overflow-hidden"
-                  >
-                    <div className={`flex flex-wrap gap-1.5 mt-2 ${isEven ? 'md:justify-end' : ''}`}>
-                      {item.tech.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-0.5 bg-slate-800 text-slate-200 text-xs rounded border border-slate-700"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+            <div className={`flex flex-wrap gap-1.5 mt-4 ${isEven ? 'md:justify-end' : ''}`}>
+              {item.tech.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-2 py-0.5 bg-slate-800 text-slate-300 text-xs rounded border border-slate-700"
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
           )}
         </div>
