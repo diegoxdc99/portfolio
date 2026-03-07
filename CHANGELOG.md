@@ -1,3 +1,13 @@
+## [1.4.0](https://github.com/diegoxdc99/portfolio/compare/v1.3.0...v1.4.0) (2026-03-07)
+
+### Features
+
+* restructure portfolio for backend engineer positioning ([#6](https://github.com/diegoxdc99/portfolio/issues/6)) ([d4790af](https://github.com/diegoxdc99/portfolio/commit/d4790affa122774a0b0b1d6fba640f50be68183d)), closes [#5](https://github.com/diegoxdc99/portfolio/issues/5)
+
+### Bug Fixes
+
+* optimize render-blocking resources and fix tech icons ([#7](https://github.com/diegoxdc99/portfolio/issues/7)) ([c10d84e](https://github.com/diegoxdc99/portfolio/commit/c10d84ed05780f03332d6b1fe401f40949f5d278))
+
 ## [1.3.0](https://github.com/diegoxdc99/portfolio/compare/v1.2.1...v1.3.0) (2026-03-06)
 
 ### Features
