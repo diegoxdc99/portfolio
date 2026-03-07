@@ -6,12 +6,12 @@ export const portfolio: PortfolioData = {
     name: "Diego Alberto Meneses Tamayo",
     shortName: "Diego Meneses",
     headline: {
-      en: "Senior Software Engineer",
-      es: "Ingeniero de Software Senior",
+      en: "Backend Engineer",
+      es: "Ingeniero Backend",
     },
     subheadline: {
-      en: "Node.js · NestJS · Cloud Architecture",
-      es: "Node.js · NestJS · Arquitectura en la Nube",
+      en: "I design and build scalable backend systems using Node.js, NestJS and cloud infrastructure.",
+      es: "Diseño y construyo sistemas backend escalables con Node.js, NestJS e infraestructura cloud.",
     },
     location: "Colombia",
     avatarUrl: "/avatar.jpg",
@@ -19,31 +19,32 @@ export const portfolio: PortfolioData = {
 
   // ─── Summary ────────────────────────────────────────────────────────────────
   summary: {
-    en: "Senior Backend Engineer with 10+ years designing scalable cloud architectures (AWS/GCP). Expert in the Node.js and NestJS ecosystem with hybrid persistence (PostgreSQL/MongoDB/Redis). Focused on technical innovation including AI-powered observability tools, and active as a technical reference and mentor within my teams.",
-    es: "Ingeniero de Backend Senior con más de 10 años de experiencia diseñando arquitecturas escalables en la nube (AWS/GCP). Experto en el ecosistema Node.js y NestJS, con dominio de persistencia híbrida (PostgreSQL/MongoDB/Redis). Enfocado en la innovación técnica y en el desarrollo de herramientas de observabilidad potenciadas por IA. Referente técnico y mentor activo en mis equipos.",
+    en: "10+ years building production systems. Expert in Node.js, NestJS, and cloud architecture (AWS/GCP) with hybrid persistence (PostgreSQL/MongoDB/Redis). Focused on scalable microservices, technical mentoring, and AI-powered observability.",
+    es: "Más de 10 años construyendo sistemas en producción. Experto en Node.js, NestJS y arquitectura cloud (AWS/GCP) con persistencia híbrida (PostgreSQL/MongoDB/Redis). Enfocado en microservicios escalables, mentoría técnica y observabilidad potenciada por IA.",
   },
 
   // ─── Navigation ─────────────────────────────────────────────────────────────
   nav: [
     { label: { en: "Home", es: "Inicio" }, href: "#home" },
     { label: { en: "Experience", es: "Experiencia" }, href: "#experience" },
-    { label: { en: "Skills", es: "Habilidades" }, href: "#skills" },
+    { label: { en: "Stack", es: "Stack" }, href: "#stack" },
+    { label: { en: "Principles", es: "Principios" }, href: "#principles" },
     { label: { en: "Contact", es: "Contacto" }, href: "#contact" },
   ],
 
   // ─── Tech Badges (Hero) ─────────────────────────────────────────────────────
   techBadges: [
     {
-      id: "nestjs",
-      name: "NestJS",
-      hoverColor: "hover:border-red-500/30",
-      iconColor: "group-hover:text-red-500",
-    },
-    {
       id: "nodejs",
       name: "Node.js",
       hoverColor: "hover:border-green-500/30",
       iconColor: "group-hover:text-green-500",
+    },
+    {
+      id: "nestjs",
+      name: "NestJS",
+      hoverColor: "hover:border-red-500/30",
+      iconColor: "group-hover:text-red-500",
     },
     {
       id: "typescript",
@@ -53,7 +54,7 @@ export const portfolio: PortfolioData = {
     },
     {
       id: "databases",
-      name: "SQL/NoSQL",
+      name: "PostgreSQL",
       hoverColor: "hover:border-cyan-400/30",
       iconColor: "group-hover:text-cyan-400",
     },
@@ -62,6 +63,12 @@ export const portfolio: PortfolioData = {
       name: "Redis",
       hoverColor: "hover:border-red-400/30",
       iconColor: "group-hover:text-red-400",
+    },
+    {
+      id: "cloud",
+      name: "AWS / GCP",
+      hoverColor: "hover:border-amber-400/30",
+      iconColor: "group-hover:text-amber-400",
     },
   ],
 
@@ -106,24 +113,28 @@ export const portfolio: PortfolioData = {
         en: "Sr. Node.js Developer",
         es: "Desarrollador Node.js Sr.",
       },
+      description: {
+        en: "Monetization platform for a major streaming service.",
+        es: "Plataforma de monetización para un servicio de streaming de gran escala.",
+      },
       date: "Jul 2024 – Present",
       current: true,
       highlights: [
         {
-          en: "Greenfield microservices architecture on GCP with NestJS, designed and built from scratch for the monetization ecosystem.",
-          es: "Arquitectura de microservicios (Greenfield) en GCP con NestJS, diseñada y desarrollada desde cero para el ecosistema de monetización.",
+          en: "Designed greenfield microservices architecture on GCP with NestJS for the monetization ecosystem.",
+          es: "Arquitectura de microservicios greenfield en GCP con NestJS para el ecosistema de monetización.",
         },
         {
-          en: "Loyalty system: integrated a points program allowing users to accumulate and redeem balance for subscriptions.",
-          es: "Sistema de fidelización: integración de programa de puntos para que los usuarios acumulen y rediman saldo en suscripciones.",
+          en: "Built loyalty system: points program with accumulation and redemption for subscriptions.",
+          es: "Sistema de fidelización: programa de puntos con acumulación y redención para suscripciones.",
         },
         {
-          en: "Partnerships & Bundling: built the Add-ons microservice to orchestrate access to third-party streaming platforms.",
-          es: "Gestión de alianzas y bundling: construcción del microservicio de Add-ons para orquestar el acceso a plataformas de streaming de terceros.",
+          en: "Built Add-ons microservice to orchestrate third-party streaming platform access.",
+          es: "Microservicio de Add-ons para orquestar acceso a plataformas de streaming de terceros.",
         },
         {
-          en: "Payment core maintenance (Recurly) with strict 100% test coverage standard (Jest/Vitest).",
-          es: "Mantenimiento del core de pagos (Recurly) con estándar estricto de 100% de cobertura de pruebas (Jest/Vitest).",
+          en: "Maintained payment core (Recurly) with strict 100% test coverage (Jest/Vitest).",
+          es: "Mantenimiento del core de pagos (Recurly) con estándar de 100% cobertura de pruebas (Jest/Vitest).",
         },
       ],
       tech: [
@@ -143,45 +154,49 @@ export const portfolio: PortfolioData = {
         en: "Semi-Senior Node.js Developer",
         es: "Desarrollador Node.js Semi-Senior",
       },
+      description: {
+        en: "Billing and subscription management services for a streaming platform.",
+        es: "Servicios de facturación y gestión de suscripciones para una plataforma de streaming.",
+      },
       date: "Mar 2022 – Jul 2024",
       current: false,
       highlights: [
         {
-          en: "Microservices development for the monetization ecosystem, delivering features for billing and subscription management.",
-          es: "Desarrollo de microservicios para el ecosistema de monetización, entregando funcionalidades de facturación y gestión de suscripciones.",
+          en: "Developed microservices for the monetization ecosystem: billing and subscription management.",
+          es: "Desarrollo de microservicios para el ecosistema de monetización: facturación y gestión de suscripciones.",
         },
         {
-          en: "Maintained and improved existing backend services, advancing toward senior engineering practices.",
-          es: "Mantenimiento y mejora de servicios backend existentes, avanzando hacia prácticas de ingeniería senior.",
+          en: "Maintained and improved backend services, advancing toward senior engineering practices.",
+          es: "Mantenimiento y mejora de servicios backend, avanzando hacia prácticas de ingeniería senior.",
         },
       ],
       tech: ["NestJS", "TypeScript", "Node.js", "GCP", "Jest"],
     },
     {
       id: "wolox",
-      company: "Wolox (an Accenture company)",
+      company: "Wolox (Accenture)",
       position: {
         en: "Software Developer",
         es: "Desarrollador de Software",
+      },
+      description: {
+        en: "FinTech digital wallet and enterprise automotive platform.",
+        es: "Billetera digital FinTech y plataforma automotriz enterprise.",
       },
       date: "Feb 2021 – Apr 2022",
       current: false,
       highlights: [
         {
-          en: "FinTech & Payments (Virtual Wallet): built the backend for a digital wallet in Argentina with integrations to multiple banking institutions.",
-          es: "FinTech y pagos (billetera virtual): desarrollo del backend para una billetera digital en Argentina con integraciones a múltiples entidades bancarias.",
+          en: "Built backend for a digital wallet in Argentina with multi-bank integrations.",
+          es: "Backend de billetera digital en Argentina con integraciones multi-banco.",
         },
         {
-          en: "Enterprise Integration (Automotive): built the vehicle buy/sell platform with bidirectional Salesforce integration for inventory and CRM sync.",
-          es: "Integración enterprise (automotriz): construcción de la plataforma de compra/venta de vehículos con integración bidireccional de Salesforce.",
+          en: "Built vehicle buy/sell platform with bidirectional Salesforce integration for inventory and CRM sync.",
+          es: "Plataforma de compra/venta de vehículos con integración bidireccional de Salesforce.",
         },
         {
-          en: "Leadership & Training: served as internal Node.js Trainer, standardizing TypeScript, Jest testing practices, and Docker/AWS architectures.",
-          es: "Liderazgo y capacitación: actuó como Entrenador de Node.js interno, estandarizando TypeScript, buenas prácticas con Jest y arquitecturas Docker/AWS.",
-        },
-        {
-          en: "Migrated and implemented modern APIs using GraphQL and Express.",
-          es: "Migración e implementación de APIs modernas con GraphQL y Express.",
+          en: "Internal Node.js Trainer: standardized TypeScript, Jest practices, and Docker/AWS architectures.",
+          es: "Entrenador interno de Node.js: estandarizó TypeScript, prácticas de Jest y arquitecturas Docker/AWS.",
         },
       ],
       tech: [
@@ -197,25 +212,25 @@ export const portfolio: PortfolioData = {
     },
     {
       id: "sophos",
-      company: "Sophos Solutions S.A.S.",
+      company: "Sophos Solutions",
       position: {
         en: "System Analyst",
         es: "Analista de Sistemas",
+      },
+      description: {
+        en: "Business analytics platform with Elasticsearch-powered metrics.",
+        es: "Plataforma de analítica de negocio con métricas impulsadas por Elasticsearch.",
       },
       date: "Nov 2019 – Feb 2021",
       current: false,
       highlights: [
         {
-          en: "Backend Node.js services interacting with the Elasticsearch cluster to extract and expose business metrics.",
-          es: "Servicios backend en Node.js para interactuar con el clúster de Elasticsearch, extrayendo y exponiendo métricas de negocio.",
+          en: "Backend services interacting with Elasticsearch cluster to extract and expose business metrics.",
+          es: "Servicios backend interactuando con clúster de Elasticsearch para extraer y exponer métricas de negocio.",
         },
         {
-          en: "Implemented business logic and security layer including account control, authentication, and user management.",
-          es: "Implementación de la lógica de negocio y seguridad, incluyendo control de cuentas, autenticación y gestión de usuarios.",
-        },
-        {
-          en: "Full Stack: built the Angular interface to visualize analytical data clearly.",
-          es: "Rol Full Stack: construcción de la interfaz Angular para visualizar la información analítica de forma clara.",
+          en: "Implemented security layer: account control, authentication, and user management.",
+          es: "Capa de seguridad: control de cuentas, autenticación y gestión de usuarios.",
         },
       ],
       tech: ["Node.js", "Elasticsearch", "Angular", "TypeScript"],
@@ -227,16 +242,20 @@ export const portfolio: PortfolioData = {
         en: "Software Developer",
         es: "Desarrollador de Software",
       },
+      description: {
+        en: "Virtual assistant (chatbot) orchestration platform on AWS.",
+        es: "Plataforma de orquestación de asistentes virtuales (chatbots) en AWS.",
+      },
       date: "2018 – 2019",
       current: false,
       highlights: [
         {
-          en: "Backend Node.js services for orchestrating and managing Virtual Assistants (Chatbots) on scalable AWS infrastructure.",
-          es: "Servicios backend en Node.js para la orquestación y gestión de Asistentes Virtuales (Chatbots) sobre infraestructura AWS.",
+          en: "Backend services for orchestrating and managing virtual assistants on scalable AWS infrastructure.",
+          es: "Servicios backend para orquestar y gestionar asistentes virtuales en infraestructura AWS escalable.",
         },
         {
-          en: "Built and maintained the system admin panel using Angular, adding configuration and reporting features.",
-          es: "Construcción y mantenimiento del panel administrativo del sistema con Angular, implementando funcionalidades de configuración y reportes.",
+          en: "Built admin panel with Angular: configuration and reporting features.",
+          es: "Panel administrativo con Angular: funcionalidades de configuración y reportes.",
         },
       ],
       tech: ["Node.js", "AWS", "Angular", "JavaScript"],
@@ -248,20 +267,20 @@ export const portfolio: PortfolioData = {
         en: "Programmer Analyst",
         es: "Analista Programador",
       },
+      description: {
+        en: "Corporate HR application ecosystem.",
+        es: "Ecosistema de aplicaciones corporativas de RRHH.",
+      },
       date: "May 2016 – Apr 2018",
       current: false,
       highlights: [
         {
-          en: "Led technical strategy and development of the HR application ecosystem, defining quality standards and architecture.",
-          es: "Lideré la estrategia técnica y el desarrollo del ecosistema de aplicaciones de RRHH, definiendo estándares de calidad y arquitectura.",
+          en: "Led technical strategy and development of the HR application ecosystem.",
+          es: "Lideré la estrategia técnica y desarrollo del ecosistema de aplicaciones de RRHH.",
         },
         {
-          en: "Managed the full software lifecycle for corporate in-house solutions, ensuring evolutionary maintenance and stability.",
-          es: "Gestioné el ciclo de vida completo de las soluciones de software corporativas, asegurando mantenimiento evolutivo y estabilidad.",
-        },
-        {
-          en: "Drove innovation participating in the architecture and launch of new strategic projects from their inception.",
-          es: "Impulsé la innovación participando en la arquitectura y puesta en marcha de nuevos proyectos estratégicos desde su concepción.",
+          en: "Managed full software lifecycle for corporate in-house solutions.",
+          es: "Gestión del ciclo de vida completo de soluciones de software corporativas.",
         },
       ],
       tech: ["JavaScript", "HTML/CSS", "SQL", "Node.js"],
@@ -273,51 +292,95 @@ export const portfolio: PortfolioData = {
         en: "Teaching Assistant",
         es: "Auxiliar de Docencia",
       },
+      description: {
+        en: "Requirements Engineering academic program.",
+        es: "Programa académico de Ingeniería de Requisitos.",
+      },
       date: "Aug 2015 – Dec 2015",
       current: false,
       highlights: [
         {
-          en: "Provided academic tutoring and support to students in Requirements Engineering.",
-          es: "Brindé tutoría académica y acompañamiento a estudiantes en la asignatura de Ingeniería de Requisitos.",
-        },
-        {
-          en: "Collaborated on class planning and creation of educational materials to facilitate technical learning.",
-          es: "Colaboré en la planificación de clases y elaboración de material didáctico para facilitar el aprendizaje técnico.",
+          en: "Academic tutoring in Requirements Engineering and software design.",
+          es: "Tutoría académica en Ingeniería de Requisitos y diseño de software.",
         },
       ],
       tech: ["Requirements Engineering", "UML", "Software Design"],
     },
   ],
 
-  // ─── Skills ─────────────────────────────────────────────────────────────────
-  skills: [
+  // ─── Tech Stack ─────────────────────────────────────────────────────────────
+  techStack: [
     {
       id: "backend",
-      name: { en: "Backend & Core", es: "Backend y Core" },
-      level: 5,
-      keywords: ["Node.js", "NestJS", "TypeScript", "Unit Testing"],
+      name: { en: "Backend", es: "Backend" },
+      keywords: ["Node.js", "NestJS", "TypeScript", "Express", "GraphQL"],
     },
     {
-      id: "cloud",
-      name: { en: "Cloud & DevOps", es: "Cloud y DevOps" },
-      level: 4,
-      keywords: ["GCP", "AWS", "Docker", "CI/CD Pipelines", "Serverless"],
+      id: "infrastructure",
+      name: { en: "Infrastructure", es: "Infraestructura" },
+      keywords: ["AWS", "GCP", "Docker", "CI/CD", "Serverless"],
     },
     {
       id: "databases",
-      name: { en: "Databases & Data", es: "Bases de Datos y Datos" },
-      level: 4,
+      name: { en: "Databases", es: "Bases de Datos" },
       keywords: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
     },
     {
-      id: "leadership",
-      name: { en: "Technical Leadership", es: "Liderazgo Técnico" },
-      level: 4,
-      keywords: [
-        "Tech Leadership",
-        "Mentoring & Training",
-        "Agile Methodologies",
-      ],
+      id: "tools",
+      name: { en: "Tools & Practices", es: "Herramientas y Prácticas" },
+      keywords: ["Jest", "Vitest", "Git", "Agile / Scrum", "Microservices"],
+    },
+  ],
+
+  // ─── Engineering Principles ─────────────────────────────────────────────────
+  principles: [
+    {
+      id: "scale",
+      title: {
+        en: "Build Systems That Scale",
+        es: "Construir Sistemas Que Escalen",
+      },
+      description: {
+        en: "Design for growth from day one.",
+        es: "Diseñar para el crecimiento desde el día uno.",
+      },
+      icon: "trending-up",
+    },
+    {
+      id: "simplicity",
+      title: {
+        en: "Simplicity Over Complexity",
+        es: "Simplicidad Sobre Complejidad",
+      },
+      description: {
+        en: "The best code is the code you don't write.",
+        es: "El mejor código es el que no necesitas escribir.",
+      },
+      icon: "minimize",
+    },
+    {
+      id: "observability",
+      title: {
+        en: "Observability First",
+        es: "Observabilidad Primero",
+      },
+      description: {
+        en: "If you can't measure it, you can't improve it.",
+        es: "Si no puedes medirlo, no puedes mejorarlo.",
+      },
+      icon: "activity",
+    },
+    {
+      id: "automation",
+      title: {
+        en: "Automate Repetitive Work",
+        es: "Automatizar Trabajo Repetitivo",
+      },
+      description: {
+        en: "Focus engineering time on what matters.",
+        es: "Enfocar el tiempo de ingeniería en lo que importa.",
+      },
+      icon: "zap",
     },
   ],
 
@@ -339,4 +402,3 @@ export const portfolio: PortfolioData = {
     },
   ],
 };
-

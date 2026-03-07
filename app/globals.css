@@ -54,7 +54,6 @@
   --animate-glow: glow 2s ease-in-out infinite alternate;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-flow: flow 3s linear infinite;
-  --animate-rain: rain 10s linear infinite;
   --animate-blink: blink 1s step-end infinite;
 }
 
@@ -134,15 +133,6 @@
   }
 }
 
-@keyframes rain {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
-
 @keyframes blink {
   0%,
   100% {
@@ -218,15 +208,4 @@
     -webkit-backdrop-filter: blur(12px);
   }
 
-  /* Scanline overlay — used in contact section */
-  .scanline-overlay {
-    background: repeating-linear-gradient(
-      to bottom,
-      transparent,
-      transparent 2px,
-      rgba(0, 0, 0, 0.08) 2px,
-      rgba(0, 0, 0, 0.08) 4px
-    );
-    pointer-events: none;
-  }
 }

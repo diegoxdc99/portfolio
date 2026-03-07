@@ -1,12 +1,9 @@
 import Hero from '@/components/sections/hero/Hero'
 import Experience from '@/components/sections/experience/Experience'
-import Skills from '@/components/sections/skills/Skills'
+import TechStack from '@/components/sections/stack/TechStack'
+import Principles from '@/components/sections/principles/Principles'
 import Contact from '@/components/sections/contact/Contact'
 
-/**
- * Root page — Server Component.
- * Composes sections; all animation logic lives inside the section components.
- */
 export default function HomePage() {
   return (
     <>
@@ -14,15 +11,19 @@ export default function HomePage() {
         <Hero />
       </section>
 
-      <section id="experience" aria-label="Experience" className="py-4">
+      <section id="experience" aria-label="Experience">
         <Experience />
       </section>
 
-      <section id="skills" aria-label="Skills" className="py-4">
-        <Skills />
+      <section id="stack" aria-label="Tech Stack">
+        <TechStack />
       </section>
 
-      <section id="contact" aria-label="Contact" className="py-4">
+      <section id="principles" aria-label="Engineering Principles">
+        <Principles />
+      </section>
+
+      <section id="contact" aria-label="Contact">
         <Contact />
       </section>
     </>

@@ -7,7 +7,7 @@ import { useLanguage } from '@/hooks/useLanguage'
 import { useScrollSpy } from '@/hooks/useScrollSpy'
 import { portfolio } from '@/data/portfolio'
 
-const SECTION_IDS = ['home', 'experience', 'skills', 'contact']
+const SECTION_IDS = ['home', 'experience', 'stack', 'principles', 'contact']
 
 export default function Navbar() {
   const { language, toggleLanguage, t } = useLanguage()

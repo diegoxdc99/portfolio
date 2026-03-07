@@ -9,7 +9,7 @@ export default function HeroTechBadges({ badges, label }: HeroTechBadgesProps) {
   return (
     <div className="pt-8 border-t border-slate-800/60 flex flex-col gap-4">
       <span className="text-xs text-slate-500 font-medium uppercase tracking-widest">{label}</span>
-      <div className="flex flex-wrap justify-center lg:justify-start gap-3 opacity-75 hover:opacity-100 transition-opacity duration-500">
+      <div className="flex flex-wrap justify-center lg:justify-start gap-3">
         {badges.map((badge) => (
           <div
             key={badge.id}
@@ -66,6 +66,12 @@ function BadgeIcon({ id, className }: { id: string; className: string }) {
       return (
         <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
           <path d="M10.5 2.661L5.404 5.03 3.75 4.217 8.836 1.85zm2.982.008l1.665.813-5.086 2.376L8.4 5.046zM3.75 5.607l2.314 1.13v2.195L3.75 7.78zm4.968 2.42v2.189l-2.024-.989V7.232zm-2.654-.53L3.75 6.37V5.19zm5.17.6l-2.516 1.13v2.185l2.516-1.168zm-2.516-.6L6.41 6.361 8.937 5.23zm7.058 9.226c-3.53.173-5.872-.814-5.872-1.67 0-.855 2.342-1.663 5.872-1.836 3.53-.172 5.872.815 5.872 1.67 0 .855-2.342 1.664-5.872 1.836m-.617-4.76l-1.008.497-1.01-.497 1.01-.497zm2.598-1.262l-1.01.497-1.008-.497 1.008-.497zm-2.598 2.466l-1.008.497-1.01-.497 1.01-.497zm2.598-1.263l-1.01.497-1.008-.497 1.008-.497zm2.598 1.263l-1.01.497-1.008-.497 1.008-.497zm-1.3-2.466l-1.009.497-1.009-.497 1.009-.497zm-2.595 4.932l-1.008.497-1.01-.497 1.01-.497zm2.595-1.263l-1.009.497-1.009-.497 1.009-.497zm-1.3 2.466l-1.008.497-1.01-.497 1.01-.497z" />
+        </svg>
+      )
+    case 'cloud':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+          <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
         </svg>
       )
     default:

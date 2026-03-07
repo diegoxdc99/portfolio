@@ -17,9 +17,9 @@ const spaceGrotesk = Space_Grotesk({
 // ─── SEO Metadata ─────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: 'Diego Meneses — Senior Backend Engineer',
+  title: 'Diego Meneses | Backend Engineer — Node.js, NestJS, Cloud Architecture',
   description:
-    'Senior Backend Engineer with 10+ years designing scalable cloud architectures (AWS/GCP). Expert in Node.js, NestJS, and hybrid persistence.',
+    'Backend engineer specialized in scalable systems, Node.js, NestJS and cloud infrastructure (AWS/GCP). 10+ years building production systems.',
   keywords: [
     'Backend Engineer',
     'Node.js',
@@ -33,16 +33,16 @@ export const metadata: Metadata = {
   authors: [{ name: 'Diego Alberto Meneses Tamayo' }],
   openGraph: {
     type: 'website',
-    title: 'Diego Meneses — Senior Backend Engineer',
+    title: 'Diego Meneses | Backend Engineer',
     description:
-      'Senior Backend Engineer with 10+ years designing scalable cloud architectures.',
+      'Backend engineer specialized in scalable systems, Node.js, NestJS and cloud infrastructure.',
     siteName: 'Diego Meneses Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Diego Meneses — Senior Backend Engineer',
+    title: 'Diego Meneses | Backend Engineer',
     description:
-      'Senior Backend Engineer with 10+ years designing scalable cloud architectures.',
+      'Backend engineer specialized in scalable systems, Node.js, NestJS and cloud infrastructure.',
   },
 }
 
