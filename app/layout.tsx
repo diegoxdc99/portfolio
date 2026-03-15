@@ -53,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={spaceGrotesk.variable} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col antialiased">
         {/* Fixed background: obsidian base + grid + gradient orbs */}
-        <div className="fixed inset-0 z-0 pointer-events-none" aria-hidden>
+        <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden>
           <div className="absolute inset-0 bg-obsidian" />
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.08]" />
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand/[0.08] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
