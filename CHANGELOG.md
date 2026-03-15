@@ -1,3 +1,9 @@
+## [1.5.0](https://github.com/diegoxdc99/portfolio/compare/v1.4.1...v1.5.0) (2026-03-15)
+
+### Features
+
+* add interactive timeline node animations on scroll ([#9](https://github.com/diegoxdc99/portfolio/issues/9)) ([e29801b](https://github.com/diegoxdc99/portfolio/commit/e29801b2b496d29172b69a0e8d3f99df466343dd))
+
 ## [1.4.1](https://github.com/diegoxdc99/portfolio/compare/v1.4.0...v1.4.1) (2026-03-15)
 
 ### Bug Fixes
