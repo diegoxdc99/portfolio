@@ -1,3 +1,9 @@
+## [1.4.1](https://github.com/diegoxdc99/portfolio/compare/v1.4.0...v1.4.1) (2026-03-15)
+
+### Bug Fixes
+
+* prevent horizontal scroll overflow on all viewports ([#8](https://github.com/diegoxdc99/portfolio/issues/8)) ([184b17f](https://github.com/diegoxdc99/portfolio/commit/184b17fc840b0e5070f9edb83da57ca8c674a002))
+
 ## [1.4.0](https://github.com/diegoxdc99/portfolio/compare/v1.3.0...v1.4.0) (2026-03-07)
 
 ### Features
