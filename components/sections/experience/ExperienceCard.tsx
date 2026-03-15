@@ -24,7 +24,11 @@ export default function ExperienceCard({ item, index }: ExperienceCardProps) {
         .join(' ')}
     >
       {/* ── Timeline node ── */}
-      <div className="absolute left-0 md:left-1/2 w-8 h-8 -translate-x-[44px] md:-translate-x-1/2 flex items-center justify-center z-10">
+      <div
+        data-timeline-node
+        {...(item.current ? { 'data-node-current': '' } : {})}
+        className="absolute left-0 md:left-1/2 w-8 h-8 -translate-x-[44px] md:-translate-x-1/2 flex items-center justify-center z-10"
+      >
         {item.current ? (
           <>
             <div className="w-4 h-4 bg-brand rounded-full shadow-[0_0_15px_rgba(59,130,246,0.8)] animate-pulse-slow" />
@@ -47,6 +51,7 @@ export default function ExperienceCard({ item, index }: ExperienceCardProps) {
         ].join(' ')}
       >
         <div
+          data-timeline-card
           className={[
             'bg-surface/40 backdrop-blur border rounded-lg p-6 relative overflow-hidden',
             'transition-colors duration-300',
